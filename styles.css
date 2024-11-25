@@ -96,36 +96,66 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section Styling */
 .hero {
-    background: linear-gradient(135deg, #2a2a72, #009ffd);
-    color: #fff;
+    position: relative;
+    background-image: url('./Images/image1.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full-screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 100px 20px;
-    animation: zoomIn 1.5s ease-in-out;
+    color: #fff; /* Ensure text is visible */
+    padding: 20px;
 }
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
 .hero h1 {
-    font-size: 48px;
+    font-size: 3rem;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+
 .hero p {
-    font-size: 18px;
-    margin-bottom: 40px;
-    animation: fadeIn 2s ease-out;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+
 .hero .btn {
-    background: #00c4ff;
-    color: #fff;
+    display: inline-block;
     padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #21282c;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 16px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s;
 }
+
 .hero .btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #8fbdef;
 }
+
 
 /* Services Section */
 .services {
