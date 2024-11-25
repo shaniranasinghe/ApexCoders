@@ -67,11 +67,25 @@ body {
     color: #00c4ff;
     animation: zoomIn 1.5s infinite alternate;
 }
+
+.logo1 img {
+    height: 100px; /* Adjust as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.logo1 img:hover {
+    transform: scale(1.1);
+}
+
 .nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
+
 .nav ul li a {
     color: #fff;
     text-decoration: none;
